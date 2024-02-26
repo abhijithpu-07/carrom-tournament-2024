@@ -38,7 +38,14 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/f
     AppRoutingModule,
     FormsModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp( {
+      apiKey: "AIzaSyBdEWw-BYRJD2oidB66C-Shac382kHWOU0",
+      authDomain: "carrom-nav-2024.firebaseapp.com",
+      projectId: "carrom-nav-2024",
+      storageBucket: "carrom-nav-2024.appspot.com",
+      messagingSenderId: "612704384917",
+      appId: "1:612704384917:web:020ddfe1a53913436da89c"
+    },),
     CommonModule,
     HttpClientModule,
     // Observable

@@ -19,13 +19,14 @@ export class CarromServiceService {
   //   return;
   // }
   saveDataIfNotExists(data: FormData): Observable<any> {
+    const {id, ...details} = data;
     return this.afs
-      .doc(`/Predictions/${data.id}`)
+      .doc(`/Predictions/${id}`)
       .get()
       .pipe(
         map((doc) => {
           if (!doc?.exists) {
-            return this.afs.collection('/Predictions').doc(data.id).set(data);
+            return this.afs.collection('/Predictions').doc(id).set(details);
           } else {
             return "exist";
           }
