@@ -3,6 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+   firebaseConfig : {
+    apiKey: "AIzaSyBdEWw-BYRJD2oidB66C-Shac382kHWOU0",
+    authDomain: "carrom-nav-2024.firebaseapp.com",
+    projectId: "carrom-nav-2024",
+    storageBucket: "carrom-nav-2024.appspot.com",
+    messagingSenderId: "612704384917",
+    appId: "1:612704384917:web:020ddfe1a53913436da89c"
+  },
   production: false
 };
 

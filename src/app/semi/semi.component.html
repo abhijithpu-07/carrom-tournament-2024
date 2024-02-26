@@ -1,0 +1,10 @@
+<div style="margin-top: 50px;"></div>
+<table *ngFor="let i of scheduleArr">
+<tr>
+    <th rowspan="2" style="text-align: center;background-color: rgb(237, 115, 106);">{{i.date}}</th>
+    <td style="background-color: rgb(61, 162, 240);">{{i.player1.names}}</td>
+</tr>
+<tr>
+    <td style="background-color: rgb(65, 162, 236);">{{i.player2.names}}</td>
+</tr>  
+</table>

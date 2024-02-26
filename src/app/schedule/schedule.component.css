@@ -1,0 +1,27 @@
+/* div .a{
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 1000px;
+    padding: 10px;
+    
+    /* background-color: aquamarine; */
+    
+/* }
+div .a:hover{
+    background-color: aquamarine;
+} */ 
+
+
+table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        width: 35%;
+        /* border-collapse: collapse; */
+      }
+      table{
+          margin-left: 430px;
+          
+      }

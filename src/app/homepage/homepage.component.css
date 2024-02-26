@@ -1,0 +1,13 @@
+ mat-calendar {
+    width: 300px;  
+    height: 350px; 
+    background-color: rgb(134, 240, 196);  
+    
+  }
+  ::ng-deep .mat-calendar-body-selected {
+    background-color: #f45511;
+   
+}
+/* ::ng-deep .mat-calendar-body-cell-content.mat-focus-indicator.mat-calendar-body-selected {
+    background-color: #a72a4d;
+    color: rgb(164, 48, 48); }*/
