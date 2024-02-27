@@ -32,7 +32,7 @@ export class PredictionFormComponent implements OnInit {
         console.log(this.fd);
         this.service.saveDataIfNotExists(this.fd).subscribe((value) => {
           if (value === 'exist') {
-            alert(`${this.fd.id} already exist`);
+            alert( `UID : ${this.fd.id} already submitted the response!!`);
           } else {
             alert('submitted');
             this.resetForm();

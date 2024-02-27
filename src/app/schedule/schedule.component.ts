@@ -40,6 +40,11 @@ export class ScheduleComponent implements OnInit {
       date: '21-FEB-24',
       player2: { names: players['ag'], status: StatusEnum.lost },
       player1: { names: players['af'], status: StatusEnum.won },
+    },
+    {
+      date: '27-FEB-24',
+      player2: { names: players['ab'], status: StatusEnum.lost },
+      player1: { names: players['ac'], status: StatusEnum.lost },
     }
     
   ];

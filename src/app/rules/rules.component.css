@@ -1,0 +1,13 @@
+div{
+    padding:0px 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px; 
+    /* font-weight: bold; */
+    color: white; 
+    background-color:#387ADF ;
+    overflow-y: auto; 
+    max-height: calc(100vh - 230px);
+    border-radius: 10px;
+    border: 1px solid black;
+}

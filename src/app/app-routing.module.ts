@@ -9,7 +9,7 @@ import { PredictionFormComponent } from './prediction-form/prediction-form.compo
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
-  // { path: '', component:AppComponent},
+  { path: '', redirectTo: '/reg', pathMatch: 'full'},
   { path:'home',component: HomepageComponent},
   { path:'reg',component: RegComponent},
   { path:'sch',component: ScheduleComponent},

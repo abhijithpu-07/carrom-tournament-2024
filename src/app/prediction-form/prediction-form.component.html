@@ -1,12 +1,16 @@
-<div class="container"><br>
-    <label for="id">UID:</label><br>
-    <input type="text"  [(ngModel)]="id" ><br><br>
-  
-    <label for="name">Name:</label><br>
-    <input type="text"  [(ngModel)]="name"  ><br><br>
-  
-    <label for="dropdown">Supporting Team:</label><br>
-    <select  [(ngModel)]="team" style="width:200px; height:40px" >
+<div class="container">
+  <div>
+    <label for="id">UID:</label><br />
+    <input type="text" [(ngModel)]="id" />
+  </div>
+  <div>
+    <label for="name">Name:</label><br />
+    <input type="text" [(ngModel)]="name" />
+  </div>
+
+  <div>
+    <label for="dropdown">Supporting Team:</label><br />
+    <select [(ngModel)]="team" style="width: 200px; height: 30px">
       <option value="">Select an option</option>
       <option value="Dexter and Sreekumar">Dexter and Sreekumar</option>
       <option value="Sanjay and Anju">Sanjay and Anju</option>
@@ -14,8 +18,9 @@
       <option value="Bipi Mohan and Sivakumar">Bipi Mohan and Sivakumar</option>
       <option value="Alok and Anand">Alok and Anand</option>
       <option value="Nisha and Anish">Nisha and Anish</option>
-     
-    </select><br><br>
-    <input type="submit" value="Submit" (click)="addData()">
-    
+    </select>
+  </div>
+  <div>
+    <input type="submit" value="Submit" (click)="addData()" />
+  </div>
 </div>

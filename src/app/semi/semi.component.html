@@ -1,10 +1,42 @@
-<div style="margin-top: 50px;"></div>
+<!-- <div style="margin-top: 50px;"></div>
 <table *ngFor="let i of scheduleArr">
 <tr>
-    <th rowspan="2" style="text-align: center;background-color: rgb(237, 115, 106);">{{i.date}}</th>
+    <th rowspan="2" style="text-align: center;background-color: #f4c9e5;">{{i.date}}</th>
     <td style="background-color: rgb(61, 162, 240);">{{i.player1.names}}</td>
 </tr>
 <tr>
     <td style="background-color: rgb(65, 162, 236);">{{i.player2.names}}</td>
 </tr>  
-</table>
+</table> -->
+
+<div class="table-container">
+    <div>
+      <table>
+        <ng-container *ngFor="let i of scheduleArr">
+          <tr>
+            <th rowspan="2" style="text-align: center; background-color: #387ADF">
+              {{ i.date }}
+            </th>
+            <td
+              [ngStyle]="{
+                'background-color':
+                  i.player1.status == statusEnum.won ? '#5EF115' : '#CDD0BB'
+              }"
+            >
+              {{ i.player1.names }}
+            </td>
+          </tr>
+          <tr>
+            <td
+              [ngStyle]="{
+                'background-color':
+                  i.player2.status == statusEnum.won ? '#5EF115' : '#CDD0BB'
+              }"
+            >
+              {{ i.player2.names }}
+            </td>
+          </tr>
+        </ng-container>
+      </table>
+    </div>
+  </div>
