@@ -1,0 +1,35 @@
+<mat-spinner color="primary" *ngIf="loaded"></mat-spinner>
+<div class="table-container">
+  <div>
+    <table >
+      <tr style="background-color: rgb(132, 126, 126);" >
+            <th >Team</th>
+            <th >Players</th>
+            <th >KnockOff</th>
+            <th >Quarter-Final</th>
+            <th >Semi-Final</th>
+            <th >Final</th>
+      </tr>
+      
+      <ng-container *ngFor="let i of pointsDataArray; index as k">
+        <tr  [ngStyle]="{
+            'background-color':
+              k%2==0 ? '#297FAB' : '#50C4ED'
+          }">
+          <td [attr.rowspan]="2" style="font-weight: bold">{{ i.id }}</td>
+          <td style="text-align: left;">{{ i.p1 }}</td>         
+          <td [attr.rowspan]="2">{{ i.knockoff }}</td>
+          <td [attr.rowspan]="2">{{ i.qf }}</td>
+          <td [attr.rowspan]="2">{{ i.sf }}</td>
+          <td [attr.rowspan]="2">{{ i.final }}</td>
+        </tr>
+        <tr [ngStyle]="{
+            'background-color':
+              k%2==0 ? '#297FAB' : '#50C4ED'
+          }">
+          <td style="text-align: left;">{{ i.p2 }}</td>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+</div>

@@ -7,6 +7,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { SemiComponent } from './semi/semi.component';
 import { PredictionFormComponent } from './prediction-form/prediction-form.component';
 import { AppComponent } from './app.component';
+import { PointsComponent } from './points/points.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/reg', pathMatch: 'full'},
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path:'sch',component: ScheduleComponent},
   { path:'semi',component: SemiComponent},
   { path:'rules',component: RulesComponent},
-  { path:'predictionForms',component: PredictionFormComponent}
+  { path:'predictionForms',component: PredictionFormComponent},
+  { path:'points',component: PointsComponent}
   // redirectTo: '/predictionForms', pathMatch: 'full' 
 ];
 

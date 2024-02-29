@@ -14,10 +14,11 @@ import { SemiComponent } from './semi/semi.component';
 import { PredictionFormComponent } from './prediction-form/prediction-form.component';
 import {HttpClientModule } from '@angular/common/http';
 import {AngularFireModule } from '@angular/fire/compat';
-import { environment } from 'src/environments/environment';
-import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore';
-
-// import { Observable } from 'rxjs';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { PointsComponent } from './points/points.component';
+import { CarromServiceService } from './carrom-service.service';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+// import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/f
     ScheduleComponent,
     RulesComponent,
     SemiComponent,
-    PredictionFormComponent
+    PredictionFormComponent,
+    PointsComponent
    
   ],
   imports: [
@@ -48,9 +50,9 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/f
     },),
     CommonModule,
     HttpClientModule,
-    // Observable
+    MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [CarromServiceService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

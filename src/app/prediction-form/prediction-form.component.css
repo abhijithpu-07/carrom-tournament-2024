@@ -2,7 +2,7 @@
     margin-top: 30px;
     width: 300px; /* Set the width */
     height: 340px; /* Set the height */
-    background-color: #387ADF; /* Set the background color */
+    background-color: #50C4ED; /* Set the background color */
     border: 1px solid #333; /* Set the border */
     border-radius: 10px; /* Add some border radius for rounded corners */
     /* text-align: center; */
@@ -17,3 +17,21 @@
     left: 50%;
     transform: translate(-50%, -50%); */
 }
+input[type="text"] {
+    /* padding: 10px; Add padding */
+    border: 1px solid black; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    /* font-size: 22px; Set font size */
+    color: #333; /* Set text color */
+    background-color: #f4f4f4; /* Set background color */
+    outline: none; /* Remove outline */
+  }
+  input[type="submit"] 
+  {
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  label{
+    color: black;
+  }
+

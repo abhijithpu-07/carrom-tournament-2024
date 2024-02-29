@@ -4,84 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrom Tournament App</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #ffffff;
-      
-      color: #333;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <title>Carrom Tournament 2024</title>
 
-    header {
-      background-color: #FBA834;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #333A73;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav li {
-      display: inline-block;
-      margin: 0 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #ecf0f1;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #3498db;
-    }
-
-    main {
-      padding: 20px;
-    }
-
-    h1 {
-      color: #2c3e50;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      color: #555;
-    }
-   
-  .outer-container{
-    position: relative;
-    z-index: 10;
-  }
-  .bg-image{
-    background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size:100% 100%;
-      position: absolute;
-      width: 100%;
-      height: 100dvh;
-      top: 0;
-      z-index: 0;
-  }
-  
-    
-  </style>
 </head>
 
 <body >
@@ -89,7 +13,7 @@
 
     <header>
       <h1>Welcome to the Carrom Tournament 2024</h1>
-      <p>This Webpage shows the Upcoming fixtures as well as results of the knockoff games.</p>
+      <p>This Webpage shows the Upcoming fixtures as well as results of the finished games.</p>
       <p>
         You can predict the Winner and can win Exciting prices.
       </p>
@@ -97,9 +21,10 @@
     
     <nav>
       <ul>
-        <li><a routerLink="/reg">Home</a></li>
+        <li><a routerLink="/reg" >Home</a></li>
         <li><a routerLink="/sch" >Knockoffs</a></li>
-        <li><a routerLink="/semi">Semi-Finals</a></li>
+        <li><a routerLink="/semi">Quarter-Finals</a></li>
+        <li><a routerLink="/points">Points</a></li>
         <li><a routerLink="/predictionForms">Predict the Winner</a></li>
         <li><a routerLink="/rules">Rules</a></li>
       </ul>
@@ -109,7 +34,7 @@
     <router-outlet></router-outlet>
   </div>
     <div class="bg-image-wrapper" >
-<img class="bg-image" src="https://c1.wallpaperflare.com/preview/837/974/534/carrom-karrom-table-game-game.jpg"> 
+<img class="bg-image" src="assets/carrom-img.jpg" alt="Carrom Table Game"> 
 </div>
     
     </body>

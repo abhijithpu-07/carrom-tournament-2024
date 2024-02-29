@@ -1,16 +1,28 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { map, Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
 import { FormData } from './common/formData';
+import { Points } from './common/Points';
+// import { AngularFireDatabase} from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CarromServiceService {
-  // fd : FormData= {id:'',name:'',team:''}
+  private dbpath = '/Points/'
+  // pointsData: Points ={
+  //   TeamId: "",
+  //   knockOff:0,
+  //   QuarterFinal:0
 
-  constructor(private afs: AngularFirestore) {}
+  // } 
+ pointsData:any
+ 
+
+  constructor(private afs: AngularFirestore
+    // private db:AngularFireDatabase
+    ) 
+    {}
   //adding data to firebase
   // addData(fd: FormData) {
   //   // fd.id=this.afs.createId();
@@ -28,6 +40,7 @@ export class CarromServiceService {
           if (!doc?.exists) {
             return this.afs.collection('/Predictions').doc(id).set(details);
           } else {
+            this.getall()
             return "exist";
           }
         })
@@ -37,31 +50,41 @@ export class CarromServiceService {
         // })
       );
   }
-  // saveDataIfNotExists(
-  //   data: FormData
-  // ): Promise<void> {
-  //   return this.afs
-  //     .doc(`/Predictions/${data.id}`)
-  //     .get()
-  //     .pipe(
-  //        map(
-  //         (doc) => {
-  //           if (!doc?.exists) {
-  //             return this.afs
-  //               .collection("/Predictions")
-  //               .doc(data.id)
-  //               .set(data);
-  //           } else {
-  //             throw new Error(`Document with ID ${data.id} already exists`);
-  //           }
-  //         }
-  //        )
-  //     )
+ 
 
-  //     .then();
+  // getall()
+  // {
+  //   this.afs.collection(this.dbpath).snapshotChanges().pipe(
+  //     map(changes =>
+  //       changes.map((c: { payload: { key: any; val: () => any; }; })=>
+  //         ({key: c.payload.key , value : c.payload.val() })
+  //         )
+  //         )
+  //       ).subscribe((d: any) =>{
+  //           this.pointsData=d;
+  //           console.log(this.pointsData)
+  //         });;
+    
   // }
 
-  getAllData() {
-    this.afs.collection('/Predictions').snapshotChanges();
+  // getAll() {
+  //   this.afs.collection(this.dbpath).snapshotChanges().subscribe(changes => {
+  //     this.pointsData = changes.map(change => {
+  //       const data = change.payload.doc.data();
+  //       const id = change.payload.doc.id;
+  //       console.log(change.payload.doc.data)
+  //       return { id, data };
+  //     });
+  //     console.log(this.pointsData);
+  //   });
+  // }
+
+  getall()
+  {
+    // console.log("hi")
+    return this.afs.collection(this.dbpath).snapshotChanges();
   }
+
+  
+
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-rules',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RulesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,
+    private location:Location) { }
 
   ngOnInit(): void {
+  }
+  navigateToHome(): void {
+    this.location.back() 
   }
 
 }

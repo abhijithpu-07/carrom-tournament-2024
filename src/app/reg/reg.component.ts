@@ -13,10 +13,10 @@ export class RegComponent implements OnInit {
   constructor(private router: Router) {}
  
   navigateToPredict(): void {
-    this.router.navigate(['/predictionForms']); // navigate to the root/home route
+    this.router.navigate(['/predictionForms']); 
   }
   navigateToCurrent(): void {
-    this.router.navigate(['/semi']); // navigate to the root/home route
+    this.router.navigate(['/semi']); 
   }
 
 }

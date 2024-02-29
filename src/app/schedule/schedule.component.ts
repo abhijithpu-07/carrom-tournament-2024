@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timeout } from 'rxjs';
 import { players } from '../common/playerNames';
 import { aa } from '../common/schedule';
 import { StatusEnum } from '../common/scheduleEnum';
@@ -10,6 +11,9 @@ import { StatusEnum } from '../common/scheduleEnum';
 })
 export class ScheduleComponent implements OnInit {
   public statusEnum = StatusEnum;
+  blur:number=1
+  
+  
   public scheduleArr: aa[] = [
     {
       date: '13-FEB-24',
@@ -33,8 +37,8 @@ export class ScheduleComponent implements OnInit {
     },
     {
       date: '20-FEB-24',
-      player2: { names: players['ad'], status: StatusEnum.won },
-      player1: { names: players['aa'], status: StatusEnum.lost },
+      player2: { names: players['aa'], status: StatusEnum.lost },
+      player1: { names: players['ad'], status: StatusEnum.won },
     },
     {
       date: '21-FEB-24',
@@ -43,7 +47,7 @@ export class ScheduleComponent implements OnInit {
     },
     {
       date: '27-FEB-24',
-      player2: { names: players['ab'], status: StatusEnum.lost },
+      player2: { names: players['ab'], status: StatusEnum.won },
       player1: { names: players['ac'], status: StatusEnum.lost },
     }
     
@@ -51,5 +55,10 @@ export class ScheduleComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.blur = 0;
+    }, 2000);
+  }
+  
 }

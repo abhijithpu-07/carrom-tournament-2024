@@ -1,17 +1,36 @@
 button.close {
-    color: azure;
+  color: azure;
 }
-.modal-body{
-    border-radius: 10px;
-   
+.modal-body {
+  border-radius: 10px;
+ 
 }
-.buttonContainer{
-    display: flex;
+.buttonContainer {
+  display: flex;
+  gap: 8px;
+  padding: 0 8px 8px 8px;
 }
-.buttonContainer button{
-    flex: 1;
-    font-weight: bold;
+.buttonContainer button {
+  flex: 1;
+  font-weight: bold;
 }
-.modal-content{
-    border: 1px solid black;
+.modal-content {
+  border: 1px solid black;
 }
+H1 {
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the font bold */
+  text-shadow: 1px 1px 2px rgba(35, 22, 133, 0.3); /* Add a subtle text shadow */
+  text-align: center;
+  color: blue;
+  animation: moveFont 1s infinite alternate;
+}
+/* Define the animation */
+@keyframes moveFont {
+    from {
+      transform: translateX(0); /* Start from original position */
+    }
+    to {
+      transform: translateX(15px); /* Move 5 pixels to the right */
+    }
+  }
