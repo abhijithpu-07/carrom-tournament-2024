@@ -1,8 +1,19 @@
-<div *ngIf="blur==1" class="modal-container" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered"  role="document">
-    <div class="modal-content" style="background-color: white;margin-top: 60px;">     
+<div
+  *ngIf="blur == 1"
+  class="modal-container"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div
+      class="modal-content"
+      style="background-color: #333A73;color: white; margin-top: 60px"
+    >
       <div class="modal-body">
-        <H1 >Quarter-Final games are completed already</H1>
+        <H1>Quarter-Final games are completed already</H1>
       </div>
       <!-- <button style="background-color: #50C4ED" type="button" class="btn btn-secondary" data-dismiss="modal" >Show Fixture</button> -->
     </div>
@@ -10,39 +21,54 @@
 </div>
 
 <div class="table-container">
-    <div  [ngStyle]="{
-      '-webkit-filter ':
-        blur == 1 ? 'blur(5px)' : 'blur(0px)',
-        'filter': 
-        blur == 1 ? 'blur(5px)' : 'blur(0px)'
-  
-    }">
-      <table>
-        <ng-container *ngFor="let i of scheduleArr">
-          <tr>
-            <th rowspan="2" style="text-align: center; background-color: #50C4ED">
-              {{ i.date }}
-            </th>
-            <td
-              [ngStyle]="{
-                'background-color':
-                  i.player1.status == statusEnum.won ? '#2EBD73' : '#AAEAC9'
-              }"
-            >
-              {{ i.player1.names }}
-            </td>
-          </tr>
-          <tr>
-            <td
-              [ngStyle]="{
-                'background-color':
-                  i.player2.status == statusEnum.won ? '#2EBD73' : '#AAEAC9'
-              }"
-            >
-              {{ i.player2.names }}
-            </td>
-          </tr>
-        </ng-container>
-      </table>
-    </div>
+  <div
+    [ngStyle]="{
+      '-webkit-filter ': blur == 1 ? 'blur(3px)' : 'blur(0px)',
+      filter: blur == 1 ? 'blur(3px)' : 'blur(0px)'
+    }"
+  >
+    <table>
+      <ng-container *ngFor="let i of scheduleArr">
+        <tr>
+          <th rowspan="2" style="text-align: center; background-color: #50c4ed">
+            {{ i.date }}
+          </th>
+          <td
+            [ngStyle]="{
+              'background-color':
+                i.player1.status == statusEnum.won ? '#2EBD73' : '#AAEAC9'
+            }"
+          >
+            {{ i.player1.names }}
+          </td>
+        </tr>
+        <tr>
+          <td
+            [ngStyle]="{
+              'background-color':
+                i.player2.status == statusEnum.won ? '#2EBD73' : '#AAEAC9'
+            }"
+          >
+            {{ i.player2.names }}
+          </td>
+        </tr>
+      </ng-container>
+
+      <tr>
+        <th  style="text-align: center; background-color: #50c4ed;">
+          WalkOver
+        </th>
+        <td
+          [ngStyle]="{
+            'background-color': '#2EBD73'
+          }"
+        >
+          Linto and Vijay
+        </td>
+      </tr>
+      <!-- <tr>
+        <td>hi</td>
+      </tr> -->
+    </table>
   </div>
+</div>

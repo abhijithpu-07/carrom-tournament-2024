@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { timeout } from 'rxjs';
 import { players } from '../common/playerNames';
 import { aa } from '../common/schedule';
 import { StatusEnum } from '../common/scheduleEnum';
@@ -58,7 +57,7 @@ export class ScheduleComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.blur = 0;
-    }, 2000);
+    }, 1000);
   }
   
 }

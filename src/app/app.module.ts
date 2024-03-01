@@ -18,6 +18,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { PointsComponent } from './points/points.component';
 import { CarromServiceService } from './carrom-service.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { HomepageComponent } from './homepage/homepage.component';
 // import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
@@ -29,7 +30,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     RulesComponent,
     SemiComponent,
     PredictionFormComponent,
-    PointsComponent
+    PointsComponent,
+    HomepageComponent
    
   ],
   imports: [

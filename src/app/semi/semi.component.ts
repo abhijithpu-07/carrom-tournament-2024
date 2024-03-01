@@ -36,7 +36,7 @@ export class SemiComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.blur = 0;
-    }, 2000);
+    }, 1000);
   }
 
 }

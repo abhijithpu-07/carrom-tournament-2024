@@ -16,7 +16,7 @@ export class RegComponent implements OnInit {
     this.router.navigate(['/predictionForms']); 
   }
   navigateToCurrent(): void {
-    this.router.navigate(['/semi']); 
+    this.router.navigate(['/semi-1']); 
   }
 
 }

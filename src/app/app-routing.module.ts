@@ -11,7 +11,7 @@ import { PointsComponent } from './points/points.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/reg', pathMatch: 'full'},
-  { path:'home',component: HomepageComponent},
+  { path:'semi-1',component: HomepageComponent},
   { path:'reg',component: RegComponent},
   { path:'sch',component: ScheduleComponent},
   { path:'semi',component: SemiComponent},

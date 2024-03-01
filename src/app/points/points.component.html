@@ -14,7 +14,9 @@
       <ng-container *ngFor="let i of pointsDataArray; index as k">
         <tr  [ngStyle]="{
             'background-color':
-              k%2==0 ? '#297FAB' : '#50C4ED'
+              k%2==0 ? '#297FAB' : '#50C4ED',
+              'color':
+              k%2==0 ? 'white' : 'black'
           }">
           <td [attr.rowspan]="2" style="font-weight: bold">{{ i.id }}</td>
           <td style="text-align: left;">{{ i.p1 }}</td>         
@@ -25,7 +27,9 @@
         </tr>
         <tr [ngStyle]="{
             'background-color':
-              k%2==0 ? '#297FAB' : '#50C4ED'
+              k%2==0 ? '#297FAB' : '#50C4ED',
+              'color':
+              k%2==0 ? 'white' : 'black'
           }">
           <td style="text-align: left;">{{ i.p2 }}</td>
         </tr>

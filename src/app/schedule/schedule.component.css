@@ -63,10 +63,10 @@ tr:last-child td:last-child {
 
 .modal-container
 {
-   position: absolute;
-   top: 40%;
-   right: 33%;
-   z-index: 10;
+  position: absolute;
+  top: 45%;
+  right: 33%;
+  z-index: 10;
    
    
 }

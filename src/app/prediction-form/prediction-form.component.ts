@@ -22,6 +22,12 @@ export class PredictionFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  goBack()
+  {
+    this.location.back(); 
+    this.resetForm();
+  }
+
   addData() {
     const id = this.id;
 
@@ -60,6 +66,4 @@ export class PredictionFormComponent implements OnInit {
     this.team = '';
   }
 }
-function res(res: any, arg1: any) {
-  throw new Error('Function not implemented.');
-}
+
