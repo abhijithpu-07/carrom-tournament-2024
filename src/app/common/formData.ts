@@ -1,5 +1,7 @@
 export interface FormData{
     id: string,
     name :string,
-    team:string
+    team:string,
+    email:string,
+    account:string
 }

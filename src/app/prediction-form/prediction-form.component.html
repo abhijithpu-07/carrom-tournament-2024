@@ -1,27 +1,38 @@
 <div class="container">
   <div>
-    <label for="id">UID:</label><br />
-    <input type="text" [(ngModel)]="id" />
+    <label for="id">UID:</label>
+    <input style="margin-left:36px" type="text" [(ngModel)]="id" />
   </div>
   <div>
-    <label for="name">Name:</label><br />
-    <input type="text" [(ngModel)]="name" />
+    <label for="name">Name:</label>
+    <input style="margin-left:21px" type="text" [(ngModel)]="name" />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input  style="margin-left:24px" type="text" [(ngModel)]="email" />
+  </div>
+  <div>
+    <label for="account">Account:</label>
+    <!-- <input style="margin-left:6px" type="text" [(ngModel)]="name" /> -->
+    <select [(ngModel)]="account"  style="width: 200px; height: 30px;border-radius: 5px;margin-left:6px;border-radius: 5px;border: 1px solid black;">
+      <option value="">Select an option</option>
+      <option value="NAVISTAR">NAVISTAR</option>
+      <option value="DANA">DANA</option>
+      <option value="OSG">OSG</option>   
+    </select>
   </div>
 
   <div>
-    <label for="dropdown">Supporting Team:</label><br />
-    <select [(ngModel)]="team"  style="width: 200px; height: 30px;border-radius: 5px;">
+    <label for="dropdown">Supporting Team:</label>
+    <select [(ngModel)]="team"  style="width: 200px; height: 30px;border-radius: 5px;border: 1px solid black;margin-left: 68px;">
       <option value="">Select an option</option>
       <option value="Dexter and Sreekumar">Dexter and Sreekumar</option>
-      <!-- <option value="Sanjay and Anju">Sanjay and Anju</option> -->
       <option value="Narayanaswamy and Aiyna">Narayanaswamy and Aiyna</option>
       <option value="Bipi Mohan and Sivakumar">Bipi Mohan and Sivakumar</option>
       <option value="Vijay and Linto">Vijay and Linto</option>
-      <!-- <option value="Alok and Anand">Alok and Anand</option> -->
-      <!-- <option value="Nisha and Anish">Nisha and Anish</option> -->
     </select>
   </div>
-  <div>
+  <div style="margin-left:95px ;">
     <input type="submit" value="SUBMIT" (click)="addData()" />
     <input style="margin-left:20px ;" type="submit" value="BACK" (click)="goBack()" />
   </div>

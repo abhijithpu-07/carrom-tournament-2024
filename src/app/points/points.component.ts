@@ -14,7 +14,7 @@ export class PointsComponent implements OnInit {
   
 
   pointsDataArray :Points[] =[]
-  allData : any[]=[]
+  // allData : any[]=[]
   loaded:boolean=true
   
 
@@ -59,7 +59,7 @@ export class PointsComponent implements OnInit {
         // console.log(data)
         return data;
       })
-      console.log(this.pointsDataArray)
+      // console.log(this.pointsDataArray)
     })
     
   }
