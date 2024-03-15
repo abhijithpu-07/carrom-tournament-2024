@@ -12,7 +12,7 @@ import { PointsComponent } from './points/points.component';
 const routes: Routes = [
   { path: '', redirectTo: '/reg', pathMatch: 'full'},
   { path:'semi-1',component: HomepageComponent},
-  { path:'reg',component: RegComponent},
+  { path:'reg',component: RegComponent}, 
   { path:'sch',component: ScheduleComponent},
   { path:'semi',component: SemiComponent},
   { path:'rules',component: RulesComponent},
