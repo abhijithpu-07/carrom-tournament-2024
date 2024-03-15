@@ -13,9 +13,9 @@ div .a:hover{
 } */
 .table-container {
   margin-top: 80px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   /* margin-top: 20px; */
-  height: calc(100vh - 245px);
+  /* height: calc(100vh - 100px); */
   display: flex;
   flex-direction: column;
   align-items: center;

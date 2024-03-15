@@ -28,6 +28,14 @@ export class PredictionFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  moveFocus(event: any, nextId: string) {
+    event.preventDefault();
+    const nextElement = document.getElementById(nextId);
+    if (nextElement) {
+      nextElement.focus();
+    }
+  }
+
   public goBack()
   {
     this.location.back(); 

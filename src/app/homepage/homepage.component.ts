@@ -14,12 +14,12 @@ export class HomepageComponent implements OnInit {
   public statusEnum = StatusEnum;
   public scheduleArr: aa[] = [
     {
-      date: '13-FEB-24',
+      date: '12-MAR-24',
       player1: { names: players['af'], status: StatusEnum.won },
       player2: { names: players['ab'], status: StatusEnum.lost },
     },
     {
-      date: '13-FEB-24',
+      date: '13-MAR-24',
       player2: { names: players['ad'], status: StatusEnum.lost },
       player1: { names: players['al'], status: StatusEnum.won },
     },
